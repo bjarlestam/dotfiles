@@ -16,7 +16,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails3 gem textmate fabric)
+plugins=(git ruby rails3 gem textmate fabric mercurial)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # My stuffs below...
 #-------------------------------------------------------------
 
-export PATH="$PATH:/Applications/play-1.2.3:/Applications/scala-2.8.1.final/bin:/Applications/jruby-1.5.6/bin:/usr/local/mysql/bin"
+export PATH="$PATH:/opt/playframework/play:/Applications/scala-2.8.1.final/bin:/Applications/jruby-1.5.6/bin:/usr/local/mysql/bin:/Applications/jad158g"
 
 # For Culerity tests
 export JRUBY_INVOCATION="jruby -J-Xmn512m -J-Xms2048m -J-Xmx2048m"
@@ -45,6 +45,8 @@ alias cd..="cd .."
 alias ..="cd .."
 alias which="type -a"
 
+alias du1='du -hs *(/)'
+
 #More is not installed, so use less instead
 #alias more="less"
 
@@ -55,6 +57,8 @@ alias timereport_add_week="cd_ruby && rvm use 1.9.2 && ruby add_week.rb ~/Deskto
 
 alias ios="open -a /Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias firefox="open -a Firefox"
+alias chrome_spdy="open /Applications/Google\ Chrome.app --args --use-spdy=no-ssl"
+alias chrome_speedtracer="open /Applications/Google\ Chrome.app --args --enable-extension-timeline-api"
 
 alias wireshark="sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark"
 alias myip="curl ifconfig.me"
@@ -83,6 +87,11 @@ function fe()
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
+export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
+
+# OSX aliases
+alias show_hidden_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
+alias hide_hidden_files="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
 #-------------------------------------------------------------
 # Ruby RVM config
@@ -108,3 +117,11 @@ export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/oracle/instantclient10"
 
 # MCC Django 
 export DJANGO_SETTINGS_MODULE=mcc.settings
+
+
+#export PATH=$HOME/Code/node/installed/bin:$PATH
+
+path_append ()  { path_remove $1; export PATH="$PATH:$1"; }
+path_prepend () { path_remove $1; export PATH="$1:$PATH"; }
+path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
+
