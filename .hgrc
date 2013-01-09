@@ -4,10 +4,6 @@ username = bjarlestam
 
 [merge-tools]
 
-[http_proxy]
-#host=proxy.svt.se:8080
-
-
 [extensions]
 rebase=
 purge=
