@@ -1,6 +1,7 @@
 [ui]
 merge = internal:merge
 username = bjarlestam
+editor = vim
 
 [merge-tools]
 
