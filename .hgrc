@@ -2,6 +2,7 @@
 merge = internal:merge
 username = bjarlestam
 editor = vim
+ssh = ssh -C
 
 [merge-tools]
 
