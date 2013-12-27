@@ -16,7 +16,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ruby rails3 gem textmate fabric mercurial)
+plugins=(git ruby rails gem textmate fabric mercurial bower macports)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,7 +27,7 @@ source $ZSH/oh-my-zsh.sh
 # My stuffs below...
 #-------------------------------------------------------------
 
-export PATH="$PATH:/Users/andreasbjarlestam/.gem/ruby/1.8/bin:/opt/playframework/play:/Applications/scala-2.8.1.final/bin:/Applications/jruby-1.5.6/bin:/usr/local/mysql/bin:/Applications/jad158g"
+export PATH="$PATH:/Users/andreasbjarlestam/.node/bin:/Users/andreasbjarlestam/.gem/ruby/1.8/bin:/opt/playframework/play:/Applications/scala-2.8.1.final/bin:/Applications/jruby-1.5.6/bin:/usr/local/mysql/bin:/Applications/jad158g"
 
 # For Culerity tests
 export JRUBY_INVOCATION="jruby -J-Xmn512m -J-Xms2048m -J-Xmx2048m"
