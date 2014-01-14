@@ -105,7 +105,7 @@ export PATH=$PATH:$JBOSS_HOME/bin
 export ANT_HOME="/Applications/apache-ant-1.8.2"
 export PATH=$PATH:$ANT_HOME/bin
 
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/
 #export M2_HOME=/opt/local/share/java/maven2
 
 export MAVEN3_HOME=$HOME/apache-maven-3.0.5
