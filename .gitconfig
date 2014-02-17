@@ -33,3 +33,5 @@
   untracked = cyan
 [push]
 	default = simple
+[url "https://"]
+	insteadOf = git://
