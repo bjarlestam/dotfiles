@@ -4,6 +4,7 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore ~/.gitignore
 ln -s ~/dotfiles/.hgrc ~/.hgrc
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/check_for_updates.sh ~/check_for_updates.sh
 
 
 if [ ! -d ~/.oh-my-zsh ]; then
