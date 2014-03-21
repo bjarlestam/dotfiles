@@ -11,4 +11,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
-chsh -s `which zsh`
+# Make sure zsh is used
+if [ ! -n $ZSH_VERSION ]; then
+  chsh -s `which zsh`
+fi
