@@ -1,4 +1,6 @@
 #!/bin/sh
+# This script will update brew and npm if its been more than 7 days
+# since last time it was executed
 
 function _current_epoch() {
   echo $(($(date +%s) / 60 / 60 / 24))
