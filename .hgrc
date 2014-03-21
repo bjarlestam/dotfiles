@@ -12,7 +12,6 @@ purge=
 pager=
 color=
 fetch=
-hgext.hgshelve=~/.hgext/hgshelve/hgshelve.py
 mq=
 
 [pager]
