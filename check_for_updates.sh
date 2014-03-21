@@ -20,7 +20,7 @@ function _upgrade_system() {
   _update_epoch_file
 }
 
-update_interval=-1 #days
+update_interval=7 #days
 
 
 if [ -f ~/.system-update-epoch ]
