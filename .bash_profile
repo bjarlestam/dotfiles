@@ -49,5 +49,5 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/local/mysql/bin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
 
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/
 export M2_HOME=/opt/local/share/java/maven2

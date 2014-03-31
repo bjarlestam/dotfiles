@@ -25,6 +25,9 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 JAVA_HOME=$(/usr/libexec/java_home)
 
+# rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 #-------------------------------------------------------------
 # General aliases:
 #-------------------------------------------------------------
@@ -49,7 +52,7 @@ alias ios='open $(xcode-select -p)/Platforms/iPhoneSimulator.platform/Developer/
 alias firefox="open -a Firefox"
 alias chrome_spdy="open /Applications/Google\ Chrome.app --args --use-spdy=no-ssl"
 alias chrome_speedtracer="open /Applications/Google\ Chrome.app --args --enable-extension-timeline-api"
-
+alias idea="open /Applications/IntelliJ\ IDEA\ 13.app"
 alias wireshark="sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark"
 alias myip="curl ifconfig.me"
 
@@ -69,3 +72,5 @@ path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'
 
 
 ~/check_for_updates.sh
+
+eval "$(/Users/andreas.bjarlestam/projects/svt/escenic/manage/environment)"

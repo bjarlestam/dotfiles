@@ -49,3 +49,5 @@ else
   # create the epoch file
   _update_epoch_file
 fi
+
+exit 0
