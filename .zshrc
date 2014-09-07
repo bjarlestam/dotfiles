@@ -8,7 +8,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn)
+plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -23,7 +23,8 @@ export PATH=$PATH:~/.node/bin
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -45,8 +46,11 @@ alias du1='du -hs *(/)'
 alias zshrc='vim ~/.zshrc'
 
 # Time reporting aliases
-alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt"
+alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt && atom ~/Desktop/tider.txt:1120"
 alias timereport="open ~/Desktop/tider.txt"
+
+# TODO: Did not work as an alias, works when run directly on command line
+alias hugo_assistans_weekly_report="pbpaste | grep '^[0-9|,]*h' | cut -d h -f 1 | sed s/,/\./g | awk '{s+=$1} END {print s}'D"
 
 alias ios='open $(xcode-select -p)/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app'
 alias firefox="open -a Firefox"
@@ -72,5 +76,3 @@ path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'
 
 
 ~/check_for_updates.sh
-
-eval "$(/Users/andreas.bjarlestam/projects/svt/escenic/manage/environment)"

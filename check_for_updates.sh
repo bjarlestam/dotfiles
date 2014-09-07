@@ -37,7 +37,7 @@ then
   if [ $epoch_diff -gt $update_interval ]
   then
     echo "[System updater] Would you like to check for updates?"
-    echo "Type Y to update brew and related stuff: \c"
+    echo "Type Y to update brew and npm: \c"
     read line
     if [ "$line" = Y ] || [ "$line" = y ]; then
       _upgrade_system
