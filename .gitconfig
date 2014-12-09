@@ -2,9 +2,9 @@
 	name = Andreas Bjärlestam
 	email = bjarlestam@gmail.com
 [core]
-	editor = mate -w
+	editor = vim 
 	autocrlf = input
-	excludesfile = /Users/andreasbjarlestam/.gitignore
+	excludesfile = ~/.gitignore
 [alias]
   st = status
   ci = commit
