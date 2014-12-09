@@ -20,7 +20,7 @@ function _upgrade_system() {
   # pip?
   #pip install --upgrade setuptools
   #pip install --upgrade pip
-  # ruby?
+  # ruby
   echo "\n gem update --system..."
   gem update --system
   echo "\n gem update ..."
