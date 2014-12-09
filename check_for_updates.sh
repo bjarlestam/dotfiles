@@ -18,7 +18,13 @@ function _upgrade_system() {
   echo "\n npm update -g..."
   npm update -g
   # pip?
+  #pip install --upgrade setuptools
+  #pip install --upgrade pip
   # ruby?
+  echo "\n gem update --system..."
+  gem update --system
+  echo "\n gem update ..."
+  gem update
   _update_epoch_file
 }
 
