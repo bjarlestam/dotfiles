@@ -66,7 +66,7 @@ alias ios='open $(xcode-select -p)/Platforms/iPhoneSimulator.platform/Developer/
 alias firefox="open -a Firefox"
 alias chrome_spdy="open /Applications/Google\ Chrome.app --args --use-spdy=no-ssl"
 alias chrome_speedtracer="open /Applications/Google\ Chrome.app --args --enable-extension-timeline-api"
-alias idea="open /Applications/IntelliJ\ IDEA\ 13.app"
+alias idea="open /Applications/IntelliJ\ IDEA\ 14.app"
 #alias wireshark="sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark"
 alias myip="curl ifconfig.me"
 
