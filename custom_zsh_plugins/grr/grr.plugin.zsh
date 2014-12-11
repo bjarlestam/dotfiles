@@ -21,6 +21,7 @@ _grr ()
     'bootRun'
     'build'
     'clean'
+    'idea'
     'test'
     )
     _describe -t commands 'grr' gr_commands ;;
