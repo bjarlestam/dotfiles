@@ -1,3 +1,8 @@
+if [ ! -d ~/dotfiles ]; then
+  echo "dotfiles repo must be in ~/dotfiles "
+  exit 1
+fi
+
 echo "creating symlinks to dotfiles..."
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.bash_profile ~/.bash_profile
