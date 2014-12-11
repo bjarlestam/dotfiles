@@ -8,7 +8,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn vagrant gradle)
+plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn vagrant grr)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,8 +72,6 @@ alias myip="curl ifconfig.me"
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
-
-alias gr='./gradlew'
 
 source ~/.zshrc_bjarlestam_secret
 

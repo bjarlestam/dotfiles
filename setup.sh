@@ -13,6 +13,9 @@ if [ ! -d ~/.oh-my-zsh ]; then
   git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
+echo "adding custom oh-my-zsh plugins..."
+ln -s ~/dotfiles/custom_zsh_plugins/grr ~/.oh-my-zsh/custom/plugins/grr
+
 # Make sure zsh is used
 if [ ! -n $ZSH_VERSION ]; then
   echo "setting shell to zsh..."
