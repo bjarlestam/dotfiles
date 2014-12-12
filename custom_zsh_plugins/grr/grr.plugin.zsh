@@ -23,6 +23,7 @@ _grr ()
     'clean'
     'idea'
     'test'
+    'publishToMavenLocal'
     )
     _describe -t commands 'grr' gr_commands ;;
   esac
