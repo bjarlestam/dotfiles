@@ -79,6 +79,9 @@ source ~/.zshrc_bjarlestam_secret
 alias show_hidden_files="defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder"
 alias hide_hidden_files="defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder"
 
+# disable inline attachements in OSX Mail app
+defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+
 # OSX keybindings
 bindkey "[C" forward-word
 bindkey "[D" backward-word
