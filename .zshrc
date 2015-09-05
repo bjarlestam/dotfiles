@@ -69,6 +69,7 @@ alias chrome_speedtracer="open /Applications/Google\ Chrome.app --args --enable-
 alias idea="open /Applications/IntelliJ\ IDEA\ 14.app"
 #alias wireshark="sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark"
 alias myip="curl ifconfig.me"
+alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
