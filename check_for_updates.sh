@@ -14,7 +14,7 @@ function _upgrade_system() {
   echo "\n brew update..."
   brew update
   echo "\n brew upgrade..."
-  brew upgrade
+  brew upgrade --all
   echo "\n npm update -g..."
   npm update -g
   # pip?
