@@ -12,6 +12,9 @@ plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn vagrant
 
 source $ZSH/oh-my-zsh.sh
 
+# Node nvm setup
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 #-------------------------------------------------------------
 # My stuffs below...
