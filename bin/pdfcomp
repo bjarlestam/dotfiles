@@ -1,0 +1,3 @@
+#!/bin/sh
+mv $@ $@.orig
+gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$@ $@.orig
