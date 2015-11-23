@@ -4,7 +4,7 @@
 [core]
 	editor = vim 
 	autocrlf = input
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/andreas.bjarlestam/.gitignore
 [alias]
   st = status
   ci = commit
@@ -37,3 +37,9 @@
 	insteadOf = git://
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
