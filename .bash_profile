@@ -31,5 +31,5 @@ export PATH=$PATH:~/.node/bin
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-echo "############################ in .bash_profile ##############################"
+#echo "############################ in .bash_profile ##############################"
 export JAVA_HOME=$(/usr/libexec/java_home)

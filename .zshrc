@@ -96,3 +96,5 @@ path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'
 
 
 ~/check_for_updates.sh
+
+eval "$(/Users/andreas.bjarlestam/projects/svt/escenic/manage/environment)"
