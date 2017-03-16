@@ -8,13 +8,12 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew ruby rails gem node npm fabric mercurial bower ant mvn vagrant grr)
+plugins=(git brew ruby gem node npm yarn mercurial vagrant docker docker-compose heroku virtualenv grr)
 
 source $ZSH/oh-my-zsh.sh
 
 # Node nvm setup
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 #-------------------------------------------------------------
 # My stuffs below...
@@ -29,8 +28,18 @@ export PATH=$PATH:~/.node/bin
 #mysql - could not get version 5.1 working from brew, so downloaded manually
 export PATH=$PATH:/usr/local/mysql/bin
 
+
+#play1.4 - could not get it to work with homebrew
+#export PATH=$PATH:/usr/local/play-1.4.3
+export PATH=$PATH:/usr/local/play-1.4.4
+
+
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+
+# added by Miniconda2 4.2.12 installer
+export PATH="/Users/andreas.bjarlestam/miniconda2/bin:$PATH"
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
@@ -90,11 +99,14 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
 bindkey "[C" forward-word
 bindkey "[D" backward-word
 
-path_append ()  { path_remove $1; export PATH="$PATH:$1"; }
-path_prepend () { path_remove $1; export PATH="$1:$PATH"; }
-path_remove ()  { export PATH=`echo -n $PATH | awk -v RS=: -v ORS=: '$0 != "'$1'"' | sed 's/:$//'`; }
 
+akamai-staging() {
+    echo "$(dig +short $1 CNAME | sed 's/\.net\.$/-staging\.net/' | xargs dig +short A | tail -n1)  $1"
+}
+  
 
 ~/check_for_updates.sh
 
-eval "$(/Users/andreas.bjarlestam/projects/svt/escenic/manage/environment)"
+
+export NVM_DIR="/Users/andreas.bjarlestam/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

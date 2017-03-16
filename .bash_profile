@@ -33,3 +33,12 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 #echo "############################ in .bash_profile ##############################"
 export JAVA_HOME=$(/usr/libexec/java_home)
+
+# added by Anaconda3 4.0.0 installer
+export PATH="/Users/andreas.bjarlestam/anaconda/bin:$PATH"
+
+# added by Miniconda2 4.2.12 installer
+export PATH="/Users/andreas.bjarlestam/miniconda2/bin:$PATH"
+
+eval "$(/Users/andreas.bjarlestam/projects/svt/svtservice-play-escenic/manage/environment)"
+
