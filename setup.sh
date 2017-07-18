@@ -23,10 +23,11 @@ echo "adding custom oh-my-zsh plugins..."
 ln -s ~/dotfiles/custom_zsh_plugins/grr ~/.oh-my-zsh/custom/plugins/grr
 
 # Make sure zsh is used
-if [ ! -n $ZSH_VERSION ]; then
-  echo "setting shell to zsh..."
-  chsh -s `which zsh`
-fi
+echo "setting shell to zsh..."
+chsh -s /bin/zsh 
+
+echo "fetching solarized submodules"
+git submodule update --init --recursive
 
 echo "done!"
 
