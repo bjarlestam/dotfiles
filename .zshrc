@@ -14,6 +14,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Node nvm setup
 export NVM_DIR=~/.nvm
+. "/usr/local/opt/nvm/nvm.sh"
 
 #-------------------------------------------------------------
 # My stuffs below...
@@ -37,9 +38,6 @@ export PATH=$PATH:/usr/local/play-1.4.4
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-
-# added by Miniconda2 4.2.12 installer
-export PATH="/Users/andreas.bjarlestam/miniconda2/bin:$PATH"
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
@@ -108,5 +106,3 @@ akamai-staging() {
 ~/check_for_updates.sh
 
 
-export NVM_DIR="/Users/andreas.bjarlestam/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
