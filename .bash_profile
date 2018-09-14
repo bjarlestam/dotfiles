@@ -42,3 +42,6 @@ export PATH="/Users/andreas.bjarlestam/miniconda2/bin:$PATH"
 
 eval "$(/Users/andreas.bjarlestam/projects/svt/svtservice-play-escenic/manage/environment)"
 
+
+# added by Miniconda3 4.3.21 installer
+export PATH="/Users/andreas/miniconda3/bin:$PATH"

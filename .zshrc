@@ -30,7 +30,9 @@ export PATH=$PATH:~/.node/bin
 export PATH=$PATH:/usr/local/mysql/bin
 
 
-#play1.4 - could not get it to work with homebrew
+# added by Miniconda3 4.3.21 installer
+export PATH="/Users/andreas/miniconda3/bin:$PATH"#play1.4 - could not get it to work with homebrew
+
 #export PATH=$PATH:/usr/local/play-1.4.3
 export PATH=$PATH:/usr/local/play-1.4.4
 
@@ -41,7 +43,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 #export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -66,7 +68,7 @@ alias du1='du -hs *(/)'
 alias zshrc='vim ~/.zshrc'
 
 # Time reporting aliases
-alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt && atom ~/Desktop/tider.txt:1120"
+alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt"
 alias timereport="open ~/Desktop/tider.txt"
 
 # TODO: Did not work as an alias, works when run directly on command line
@@ -83,6 +85,9 @@ alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
 
 alias fd='find . -type d -name'
 alias ff='find . -type f -name'
+
+alias urldecode='python -c "import urllib, sys; print urllib.unquote(sys.argv[1])"'
+alias urlencode='python -c "import urllib, sys; print urllib.quote(sys.argv[1])"'
 
 source ~/.zshrc_bjarlestam_secret
 
