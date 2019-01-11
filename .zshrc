@@ -12,6 +12,9 @@ plugins=(git brew ruby gem node npm yarn mercurial vagrant docker docker-compose
 
 source $ZSH/oh-my-zsh.sh
 
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # Node nvm setup
 export NVM_DIR=~/.nvm
 . "/usr/local/opt/nvm/nvm.sh"
@@ -22,9 +25,6 @@ export NVM_DIR=~/.nvm
 
 # my local bin
 export PATH=$PATH:~/bin
-
-# npm
-export PATH=$PATH:~/.node/bin
 
 #mysql - could not get version 5.1 working from brew, so downloaded manually
 export PATH=$PATH:/usr/local/mysql/bin
@@ -44,6 +44,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 #export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home"
 
 # rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
