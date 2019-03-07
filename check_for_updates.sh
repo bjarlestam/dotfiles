@@ -14,7 +14,7 @@ function _upgrade_system() {
   echo "\n brew update..."
   brew update
   echo "\n brew upgrade..."
-  brew upgrade --all
+  brew upgrade
   # pip?
   #pip install --upgrade setuptools
   #pip install --upgrade pip
