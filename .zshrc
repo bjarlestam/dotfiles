@@ -8,7 +8,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew ruby gem node npm yarn mercurial vagrant docker docker-compose heroku virtualenv grr)
+plugins=(git brew gem node npm yarn docker docker-compose heroku virtualenv grr)
 
 source $ZSH/oh-my-zsh.sh
 
