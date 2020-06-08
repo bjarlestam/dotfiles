@@ -45,3 +45,9 @@ eval "$(/Users/andreas.bjarlestam/projects/svt/svtservice-play-escenic/manage/en
 
 # added by Miniconda3 4.3.21 installer
 export PATH="/Users/andreas/miniconda3/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/andreas/.sdkman"
+[[ -s "/Users/andreas/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andreas/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$HOME/.cargo/bin:$PATH"

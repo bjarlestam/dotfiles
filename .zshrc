@@ -19,6 +19,9 @@ export LC_ALL=en_US.UTF-8
 export NVM_DIR=~/.nvm
 . "/usr/local/opt/nvm/nvm.sh"
 
+# Rust
+source $HOME/.cargo/env
+
 #-------------------------------------------------------------
 # My stuffs below...
 #-------------------------------------------------------------
@@ -31,7 +34,7 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 
 # added by Miniconda3 4.3.21 installer
-export PATH="/Users/andreas/miniconda3/bin:$PATH"#play1.4 - could not get it to work with homebrew
+# export PATH="/Users/andreas/miniconda3/bin:$PATH"  # commented out by conda initialize#play1.4 - could not get it to work with homebrew
 
 #export PATH=$PATH:/usr/local/play-1.4.3
 export PATH=$PATH:/usr/local/play-1.4.4
@@ -79,7 +82,6 @@ alias ios='open $(xcode-select -p)/Platforms/iPhoneSimulator.platform/Developer/
 alias firefox="open -a Firefox"
 alias chrome_spdy="open /Applications/Google\ Chrome.app --args --use-spdy=no-ssl"
 alias chrome_speedtracer="open /Applications/Google\ Chrome.app --args --enable-extension-timeline-api"
-alias idea="open /Applications/IntelliJ\ IDEA\ 15.app"
 #alias wireshark="sudo /Applications/Wireshark.app/Contents/MacOS/Wireshark"
 alias myip="curl ifconfig.me"
 alias atom="/Applications/Atom.app/Contents/MacOS/Atom"
@@ -112,3 +114,51 @@ akamai-staging() {
 ~/check_for_updates.sh
 
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/andreas/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/andreas/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/andreas/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/andreas/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/andreas/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/andreas/gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/andreas/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/andreas/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/andreas/.sdkman"
+[[ -s "/Users/andreas/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andreas/.sdkman/bin/sdkman-init.sh"
+
+# place this after nvm initialization!
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
