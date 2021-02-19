@@ -23,6 +23,7 @@ function _upgrade_system() {
  # gem update --system
 #  echo "\n gem update ..."
 #  gem update
+  ./backup_protected_dotfiles.sh
   _update_epoch_file
 }
 

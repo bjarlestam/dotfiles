@@ -1,5 +1,5 @@
 [user]
-	name = Andreas Bjärlestam
+	name = Andreas Bjärlestam 
 	email = bjarlestam@gmail.com
 [core]
 	editor = vim 
@@ -32,7 +32,7 @@
   changed = green
   untracked = cyan
 [push]
-	default = simple
+	default = current
 [url "https://"]
 	insteadOf = git://
 [credential]

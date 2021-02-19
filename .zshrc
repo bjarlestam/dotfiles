@@ -8,7 +8,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew gem node npm yarn docker docker-compose heroku virtualenv grr)
+plugins=(git brew gem node npm yarn docker docker-compose heroku virtualenv kubectl grr)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,6 +21,10 @@ export NVM_DIR=~/.nvm
 
 # Rust
 source $HOME/.cargo/env
+
+# Go
+export GOPATH=$HOME/.gocode
+export PATH=$PATH:$GOPATH/bin
 
 #-------------------------------------------------------------
 # My stuffs below...
@@ -70,6 +74,8 @@ alias grep='grep --color'
 alias du1='du -hs *(/)'
 
 alias zshrc='vim ~/.zshrc'
+
+alias chrome="open -a 'Google Chrome'"
 
 # Time reporting aliases
 alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt"
@@ -141,24 +147,3 @@ if [ -f '/Users/andreas/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 export SDKMAN_DIR="/Users/andreas/.sdkman"
 [[ -s "/Users/andreas/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andreas/.sdkman/bin/sdkman-init.sh"
 
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
