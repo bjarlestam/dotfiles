@@ -5,29 +5,13 @@ fi
 
 echo "creating symlinks to dotfiles..."
 ln -s ~/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+ln -s ~/dotfiles/.zprofile ~/.zprofile
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.gitignore ~/.gitignore
-ln -s ~/dotfiles/.hgrc ~/.hgrc
-ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -s ~/dotfiles/check_for_updates.sh ~/check_for_updates.sh
 ln -s ~/dotfiles/bin ~/bin
 
-
-echo "downloading oh-my-zsh..."
-if [ ! -d ~/.oh-my-zsh ]; then
-  git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
-fi
-
-echo "adding custom oh-my-zsh plugins..."
-ln -s ~/dotfiles/custom_zsh_plugins/grr ~/.oh-my-zsh/custom/plugins/grr
-
-# Make sure zsh is used
-echo "setting shell to zsh..."
-chsh -s /bin/zsh 
-
-echo "fetching solarized submodules"
-git submodule update --init --recursive
+source osx.sh
 
 echo "done!"
 

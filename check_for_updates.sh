@@ -15,14 +15,6 @@ function _upgrade_system() {
   brew update
   echo "\n brew upgrade..."
   brew upgrade
-  # pip?
-  #pip install --upgrade setuptools
-  #pip install --upgrade pip
-  # ruby
-#  echo "\n gem update --system..."
- # gem update --system
-#  echo "\n gem update ..."
-#  gem update
   ./backup_protected_dotfiles.sh
   _update_epoch_file
 }
