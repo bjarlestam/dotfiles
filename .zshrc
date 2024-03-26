@@ -87,9 +87,9 @@ setopt NO_BEEP
 
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/bjarlestam/.sdkman"
-[[ -s "/Users/bjarlestam/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bjarlestam/.sdkman/bin/sdkman-init.sh"
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
