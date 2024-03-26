@@ -33,7 +33,20 @@
   untracked = cyan
 [push]
 	default = current
+	autoSetupRemote = true
 [url "https://"]
 	insteadOf = git://
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[includeIf "gitdir:projects/svt/"]
+    path = ~/.gitconfig_svt
+[pull]
+	rebase = false
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f

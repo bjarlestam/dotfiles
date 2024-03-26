@@ -1,10 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Node nvm setup
-export NVM_DIR=~/.nvm
-. "/usr/local/opt/nvm/nvm.sh"
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
 #-------------------------------------------------------------
@@ -47,9 +55,37 @@ alias hide_hidden_files="defaults write com.apple.finder AppleShowAllFiles FALSE
 bindkey "[C" forward-word
 bindkey "[D" backward-word
   
+
+# HISTORY / AUTOCOMPLETE
+# from: https://dev.to/rossijonas/how-to-set-up-history-based-autocompletion-in-zsh-k7o
+
+# initialize autocompletion
+autoload -U compinit
+compinit
+
+# history setup
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+SAVEHIST=10000
+HISTSIZE=9999
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt EXTENDED_HISTORY
+
+# autocompletion using arrow keys (based on history)
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+# never beep
+setopt NO_BEEP
+
+
 ~/check_for_updates.sh
+
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/bjarlestam/.sdkman"
 [[ -s "/Users/bjarlestam/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/bjarlestam/.sdkman/bin/sdkman-init.sh"
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
