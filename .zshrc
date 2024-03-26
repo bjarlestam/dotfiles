@@ -31,6 +31,8 @@ alias du1='du -hs *(/)'
 
 alias zshrc='vim ~/.zshrc'
 
+alias -s git="git clone"
+
 alias chrome="open -a 'Google Chrome'"
 
 # Time reporting aliases
