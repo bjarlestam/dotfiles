@@ -2,6 +2,8 @@
 export GOPATH=$HOME/.gocode
 export PATH=$PATH:$GOPATH/bin
 
+export PATH=$PATH:/Applications/IntelliJ\ IDEA.app/Contents/MacOS
+
 #-------------------------------------------------------------
 # My stuffs below...
 #-------------------------------------------------------------
