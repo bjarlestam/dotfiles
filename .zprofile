@@ -4,6 +4,9 @@ export PATH=$PATH:$GOPATH/bin
 
 export PATH=$PATH:/Applications/IntelliJ\ IDEA.app/Contents/MacOS
 
+# Added by Windsurf
+export PATH="/Users/bjarlestam/.codeium/windsurf/bin:$PATH"
+
 #-------------------------------------------------------------
 # My stuffs below...
 #-------------------------------------------------------------
