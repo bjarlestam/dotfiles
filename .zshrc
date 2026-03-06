@@ -46,6 +46,7 @@ plugins=(
   golang
   npm
   uv
+  you-should-use
   )
 
 
@@ -81,6 +82,9 @@ export NVM_DIR="$HOME/.nvm"
 # Golang
 export GOROOT=/opt/homebrew/opt/go/libexec/
 
+# Use Docker buildkit
+DOCKER_BUILDKIT=1
+
 #-------------------------------------------------------------
 # General aliases:
 #-------------------------------------------------------------
@@ -100,6 +104,8 @@ alias zshrc='vim ~/.zshrc'
 alias -s git="git clone"
 
 alias chrome="open -a 'Google Chrome'"
+
+alias c="cursor"
 
 # Time reporting aliases
 alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt"
@@ -140,3 +146,14 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/co
 
 alias ws="windsurf"
 
+# Zoxide setup
+source <(fzf --zsh)
+eval "$(zoxide init zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/bjarlestam/.lmstudio/bin"
+
+# Added by Antigravity
+export PATH="/Users/bjarlestam/.antigravity/antigravity/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
