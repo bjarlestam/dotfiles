@@ -101,11 +101,17 @@ alias du1='du -hs *(/)'
 
 alias zshrc='vim ~/.zshrc'
 
+# This will allow you to just paste a git link to clone it
 alias -s git="git clone"
 
 alias chrome="open -a 'Google Chrome'"
 
 alias c="cursor"
+
+alias d='docker $*'
+alias d-c='docker-compose $*'
+
+alias ws="windsurf"
 
 # Time reporting aliases
 alias timereport_add_week="ruby ~/projects/timetracking/add_week.rb ~/Desktop/tider.txt"
@@ -134,8 +140,6 @@ setopt NO_BEEP
 
 ~/check_for_updates.sh
 
-
-alias ws="windsurf"
 
 # Zoxide setup
 source <(fzf --zsh)
