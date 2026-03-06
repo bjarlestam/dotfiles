@@ -142,10 +142,10 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/bjarlestam/.lmstudio/bin"
+export PATH="$PATH:~/.lmstudio/bin"
 
 # Added by Antigravity
-export PATH="/Users/bjarlestam/.antigravity/antigravity/bin:$PATH"
+export PATH="~/.antigravity/antigravity/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 
