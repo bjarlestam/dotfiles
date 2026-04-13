@@ -72,6 +72,8 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export NPM_CONFIG_MIN_RELEASE_AGE=7
+
 # Lazy init of nvm to speed up shell start time
 export NVM_LAZY=1
 # Node nvm setup
@@ -139,7 +141,6 @@ bindkey "[D" backward-word
 setopt NO_BEEP
 
 ~/check_for_updates.sh
-
 
 # Zoxide setup
 source <(fzf --zsh)
